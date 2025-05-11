@@ -13,7 +13,7 @@
 <body onload="AOS.init()">
 
   <!-- Navbar -->
-  <nav class="navbar bg-white navbar-expand-lg sticky-top custom-navbar">
+  <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">
         <img src="Images/logo/Veltrix@2x.png" alt="AfroTech Logo" height="100">
@@ -24,7 +24,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">services</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="demo websites.html">Demo websites</a></li>
           <li class="nav-item"><a class="nav-link" href="contacts.html">Contact</a></li>
         </ul>
@@ -62,7 +62,7 @@
     <div class="row">
       <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="Images/service/SEO.png" class="card-img-top" alt="SEO">
+          <img src="Images/SEO.jpg" class="card-img-top" alt="SEO">
           <div class="card-body">
             <h5 class="card-title">Search Engine Optimization</h5>
             <p class="card-text">Boost your rankings and increase traffic with tailored SEO strategies.</p>
@@ -72,7 +72,7 @@
       </div>
       <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="Images/service/Social.png" class="card-img-top" alt="Social Media">
+          <img src="new pictures/pexels-photo-267350.webp" class="card-img-top" alt="Social Media">
           <div class="card-body">
             <h5 class="card-title">Social Media Campaigns</h5>
             <p class="card-text">Engage your audience with powerful social media storytelling.</p>
@@ -82,7 +82,7 @@
       </div>
       <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="Images/service/googleAds.png" class="card-img-top" alt="Google Ads">
+          <img src="Images/google Ads.jpg" class="card-img-top" alt="Google Ads">
           <div class="card-body">
             <h5 class="card-title">Google Ads & Analytics</h5>
             <p class="card-text">Maximize ROI with smart ad spend and actionable insights.</p>
@@ -93,33 +93,108 @@
     </div>
   </section>
   <!-- Contact Form + Map -->
-  <section id="contact" class="py-5 bg-light">
-    <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/mgvkeqga" method="POST">
-      <div class="mb-3">
-        <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control" id="name" required>
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" required>
-      </div>
-      <div class="grid md:grid-cols-2 gap-6">
-        <input type="date" name="visit_date" required
-               class="w-full p-3 border border-gray-300 rounded-md" />
-        <input type="time" name="visit_time" required
-               class="w-full p-3 border border-gray-300 rounded-md" />
-      </div>
-      <div class="mb-3">
-        <label for="message" class="form-label">Message</label>
-        <textarea class="form-control" id="message" rows="4" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-success">Send Message</button>
-    </form>
-    <div class="mt-4">
-      <div style="overflow:hidden;max-width:100%;width:500px;height:500px;"><div id="google-maps-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=ashele+digital+&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="embedded-map-code" href="https://www.bootstrapskins.com/themes" id="enable-map-info">premium bootstrap themes</a><style>#google-maps-display img.text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div>
+  <!-- Service Request Form -->
+<section id="service-request" class="py-5">
+  <h2>Request a Service</h2>
+  <form action="https://formsubmit.co/info@veltrixdigital.co.za" id="dynamicServiceForm" class="row g-3" method="POST">
+    <div class="col-md-6">
+      <label for="serviceSelect" class="form-label">Select a Service</label>
+      <select class="form-select" id="serviceSelect" required>
+        <option value="">-- Select Service --</option>
+        <option value="webhosting">Web Hosting & Email Hosting</option>
+        <option value="seo">SEO Services</option>
+        <option value="webdev">Web Development</option>
+        <option value="graphic">Graphic Design</option>
+        <option value="server">Dedicated Cloud Windows Server</option>
+        <option value="mgmt">Server Management</option>
+      </select>
     </div>
-  </section>
+
+    <!-- Web Dev Options -->
+    <div id="webDevOptions" class="col-12 d-none">
+      <fieldset>
+        <legend>Select Website Type</legend>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="webType" value="landing" id="landing">
+          <label class="form-check-label" for="landing">Landing Page</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="webType" value="multi" id="multi">
+          <label class="form-check-label" for="multi">Multi Page Website</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="webType" value="custom" id="custom">
+          <label class="form-check-label" for="custom">Other / Specify</label>
+        </div>
+      </fieldset>
+    </div>
+
+    <div id="landingSections" class="col-12 d-none">
+      <label>Select Landing Page Sections</label>
+      <select class="form-select" multiple>
+        <option>Main Section</option>
+        <option>About Section</option>
+        <option>Contact Section</option>
+        <option>Gallery Section</option>
+        <option>Footer Section</option>
+      </select>
+    </div>
+
+    <div id="multiPageSections" class="col-12 d-none">
+      <label>Select Pages for Website</label>
+      <select class="form-select" multiple>
+        <option>Home</option>
+        <option>About</option>
+        <option>Contact</option>
+        <option>Galleries</option>
+        <option>Posts</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <!-- Server Options -->
+    <div id="serverOptions" class="row d-none">
+      <div class="col-md-6">
+        <label class="form-label">Number of Users</label>
+        <input type="number" class="form-control" placeholder="e.g. 10">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Preferred RAM Memory</label>
+        <input type="text" class="form-control" placeholder="e.g. 16GB">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Preferred HDD</label>
+        <input type="text" class="form-control" placeholder="e.g. 512GB SSD">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Preferred Processor</label>
+        <input type="text" class="form-control" placeholder="e.g. Intel Xeon">
+      </div>
+    </div>
+
+    <!-- Standard Fields -->
+    <div class="col-md-6">
+      <label class="form-label">Your Name</label>
+      <input type="text" name="name" class="form-control" required>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Your Email</label>
+      <input type="email" name="email" class="form-control" required>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Contact Name</label>
+      <input type="text" name="contactName" class="form-control" required>
+    </div>
+    <div class="col-12">
+      <label class="form-label">Project Description</label>
+      <textarea name="description" class="form-control" rows="4" required></textarea>
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Submit Request</button>
+    </div>
+  </form>
+</section>
 </main>
 
 <!-- Footer -->
@@ -138,8 +213,8 @@
       <div class="col-md-4">
         <h5>Connect with Us</h5>
         <p>Email: info@Veltrix.co.za</p>
-        <p>Phone: +27 628190286</p>
-        <p>Phone: +27 730783548</p>
+        <p>Phone: +27 12 345 6789</p>
+        <p>Phone: +27 63580 5343</p>
       </div>
       <div class="col-md-4">
         <h5>Follow Us</h5>
@@ -159,6 +234,41 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="js/script.js"></script>
+<!-- JavaScript Logic for Dynamic Form Behavior -->
+<script>
+  const serviceSelect = document.getElementById('serviceSelect');
+  const webDevOptions = document.getElementById('webDevOptions');
+  const landingSections = document.getElementById('landingSections');
+  const multiPageSections = document.getElementById('multiPageSections');
+  const serverOptions = document.getElementById('serverOptions');
+
+  serviceSelect.addEventListener('change', function () {
+    const selected = this.value;
+    webDevOptions.classList.add('d-none');
+    landingSections.classList.add('d-none');
+    multiPageSections.classList.add('d-none');
+    serverOptions.classList.add('d-none');
+
+    if (selected === 'webdev') {
+      webDevOptions.classList.remove('d-none');
+    } else if (selected === 'server') {
+      serverOptions.classList.remove('d-none');
+    }
+  });
+
+  document.querySelectorAll('input[name="webType"]').forEach(radio => {
+    radio.addEventListener('change', function () {
+      landingSections.classList.add('d-none');
+      multiPageSections.classList.add('d-none');
+
+      if (this.value === 'landing') {
+        landingSections.classList.remove('d-none');
+      } else if (this.value === 'multi') {
+        multiPageSections.classList.remove('d-none');
+      }
+    });
+  });
+</script>
 <script>
   const typed = new Typed('#typed-text', {
     strings: [
