@@ -131,7 +131,7 @@
 
     <div id="landingSections" class="col-12 d-none">
       <label>Select Landing Page Sections</label>
-      <select class="form-select" multiple name="MultiSection[]" value="section" id="section">
+      <select class="form-select" multiple name="landingSections[]" value="section" id="section">
         <option value="main">Main Section</option>
         <option value="about">About Section</option>
         <option value="contact">Contact Section</option>
@@ -142,7 +142,7 @@
 
     <div id="multiPageSections" class="col-12 d-none">
       <label>Select Pages for Website</label>
-      <select class="form-select" name="multiPage[]" multiple>
+      <select class="form-select" name="multiPageSections[]" multiple>
         <option value="home">Home</option>
         <option value="about">About</option>
         <option value="contact">Contact</option>
@@ -155,20 +155,20 @@
     <!-- Server Options -->
     <div id="serverOptions" class="row d-none">
       <div class="col-md-6">
-        <label class="form-label" value="Number" name="Number[]">Number of Users</label>
-        <input type="number" class="form-control" placeholder="e.g. 10">
+        <label class="form-label" value="Number" >Number of Users</label>
+        <input type="number" class="form-control" name="serverOptions[]" placeholder="e.g. 10">
       </div>
       <div class="col-md-6">
-        <label class="form-label" value="Ram" name="Ram[]">Preferred RAM Memory</label>
-        <input type="text" class="form-control" placeholder="e.g. 16GB">
+        <label class="form-label" value="Ram" >Preferred RAM Memory</label>
+        <input type="text" class="form-control" name="Ram[]" placeholder="e.g. 16GB">
       </div>
       <div class="col-md-6">
-        <label class="form-label" value="HDD" name="HDD[]">Preferred HDD</label>
-        <input type="text" class="form-control" placeholder="e.g. 512GB SSD">
+        <label class="form-label" value="HDD" >Preferred HDD</label>
+        <input type="text" class="form-control" name="HDD[]" placeholder="e.g. 512GB SSD">
       </div>
       <div class="col-md-6">
-        <label class="form-label" value="processor" name="processor[]">Preferred Processor</label>
-        <input type="text" class="form-control" placeholder="e.g. Intel Xeon">
+        <label class="form-label" value="processor" >Preferred Processor</label>
+        <input type="text" class="form-control" name="processor[]" placeholder="e.g. Intel Xeon">
       </div>
     </div>
 
