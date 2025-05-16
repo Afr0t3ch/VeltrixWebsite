@@ -13,6 +13,30 @@
     .carousel {
       transition: transform 1s ease-in-out;
     }
+      .slideshow-container {
+      max-width: 600px;
+      position: relative;
+      margin: auto;
+    }
+
+    .slide {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .fade {
+      animation-name: fade;
+      animation-duration: 1s;
+    }
+
+    @keyframes fade {
+      from { opacity: 0.4; }
+      to { opacity: 1; }
+    }
   </style>
 </head>
 <body class="bg-black text-white font-sans">
@@ -27,43 +51,47 @@
       </nav>
     </div>
   </header>
-
-  <!-- Hero Carousel -->
-  <section class="pt-20" x-data="{ current: 0, slides: ['car1.jpg', 'car2.jpg', 'car3.jpg'] }" x-init="setInterval(() => current = (current + 1) % slides.length, 4000)">
-    <div class="relative h-[60vh] overflow-hidden">
-      <template x-for="(slide, index) in slides" :key="index">
-        <div x-show="current === index" class="absolute inset-0 carousel" x-transition>
-          <img :src="slide" alt="Slide" class="w-full h-full object-cover">
-        </div>
-      </template>
-      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-        <h2 class="text-white text-4xl md:text-6xl font-semibold animate-pulse">Welcome to our website</h2>
-      </div>
-    </div>
-  </section>
+<!-- slide show--->
+<div class="slideshow-container">
+  <div class="slide fade">
+    <img src="car1.jpg" alt="Car 1">
+  </div>
+  <div class="slide fade">
+    <img src="car2.jpg" alt="Car 2">
+  </div>
+  <div class="slide fade">
+    <img src="car3.jpg" alt="Car 3">
+  </div>
+</div>
+  
 
   <!-- Gallery Section -->
-  <section id="gallery" class="py-16 bg-gradient-to-b from-black to-blue-900">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-white text-center mb-10">Our Cars</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <template x-data="{}">
-          <div class="cursor-pointer group" onclick="window.location.href='car1.html'">
-            <img src="car1.jpg" alt="Car 1" class="rounded-lg shadow-lg transform group-hover:scale-105 transition duration-300">
-            <p class="text-center mt-2">Luxury Model X</p>
-          </div>
-          <div class="cursor-pointer group" onclick="window.location.href='car2.html'">
-            <img src="car2.jpg" alt="Car 2" class="rounded-lg shadow-lg transform group-hover:scale-105 transition duration-300">
-            <p class="text-center mt-2">Speedster Z</p>
-          </div>
-          <div class="cursor-pointer group" onclick="window.location.href='car3.html'">
-            <img src="car3.jpg" alt="Car 3" class="rounded-lg shadow-lg transform group-hover:scale-105 transition duration-300">
-            <p class="text-center mt-2">Elegance S</p>
-          </div>
-        </template>
-      </div>
+  <!-- Gallery Section -->
+<section id="gallery" class="py-16 bg-gradient-to-b from-black to-blue-900">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-white text-center mb-10">Our Cars</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      
+      <figure class="group cursor-pointer" onclick="window.location.href='car1.html'">
+        <img src="car1.jpg" alt="Luxury Model X" class="rounded-lg shadow-lg transform group-hover:scale-105 transition duration-300 w-full h-64 object-cover">
+        <figcaption class="text-center mt-2 text-white">Luxury Model X</figcaption>
+      </figure>
+
+      <figure class="group cursor-pointer" onclick="window.location.href='car2.html'">
+        <img src="car2.jpg" alt="Speedster Z" class="rounded-lg shadow-lg transform group-hover:scale-105 transition duration-300 w-full h-64 object-cover">
+        <figcaption class="text-center mt-2 text-white">Speedster Z</figcaption>
+      </figure>
+
+      <figure class="group cursor-pointer" onclick="window.location.href='car3.html'">
+        <img src="car3.jpg" alt="Elegance S" class="rounded-lg shadow-lg transform group-hover:scale-105 transition duration-300 w-full h-64 object-cover">
+        <figcaption class="text-center mt-2 text-white">Elegance S</figcaption>
+      </figure>
+
     </div>
-  </section>
+  </div>
+</section>
+  <!-- Gallery Section -->
+  
 
   <!-- Contact Section -->
   <section id="contact" class="py-16 bg-black">
@@ -81,6 +109,20 @@
   <footer class="bg-blue-900 text-white text-center py-4">
     &copy; 2025 Wizzy Auto. All rights reserved.
   </footer>
+<script>
+  let slideIndex = 0;
+  showSlides();
 
+  function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+  }
+</script>
 </body>
 </html>
