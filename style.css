@@ -1,0 +1,99 @@
+
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(135deg, red, gold, green, skyblue);
+}
+header {
+  background: red;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+nav {
+  background: green;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+nav a {
+  text-decoration: none;
+  color: gold;
+  font-weight: bold;
+  font-size: 18px;
+}
+section.hero {
+  text-align: center;
+  padding: 30px;
+  background-image: url('https://example.com/preschool-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.carousel-slide {
+  min-width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.info-section {
+  padding: 20px;
+  background: skyblue;
+  color: #333;
+}
+footer {
+  background: red;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: gold;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.carousel-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+.carousel-button {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: red;
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  .info-section, .hero {
+    padding: 15px;
+  }
+}

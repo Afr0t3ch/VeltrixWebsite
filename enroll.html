@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="enroll your child at Thuthukani Preschool.">
+  <title>enrollment| Thuthukani Preschool</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, red, gold, green, skyblue);
+    }
+    header {
+      background: red;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    nav {
+      background: green;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      text-decoration: none;
+      color: gold;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    section {
+      padding: 20px;
+      background: skyblue;
+      color: #333;
+    }
+    footer {
+      background: red;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    form input, form textarea, form select {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: gold;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Thuthukani Preschool</h1>
+    <p>Let the children to us</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="enroll.html">Enroll</a>
+    <a href="donate.html">Donate</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section>
+    <h2>enroll your child</h2>
+    <p>let us help grow your little ones.</p>
+    <form action="#" method="post">
+      <input type="text" name="fullName" placeholder="Your Full Name" required>
+      <input type="email" name="email" placeholder="Your Email Address" required>
+      <input type="tel" name="phone" placeholder="Your Phone Number">
+      <input type="text" name="fullName of the child" placeholder="Child's Full Name" required>
+      <input type="date" name="dob" placeholder="Child's Date of Birth" required>
+      <textarea name="message" rows="4" placeholder="Leave a message (optional)"></textarea>
+      <button type="submit">enroll now</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Thuthukani Preschool | Thank you for your support!
+  </footer>
+</body>
+</html>
