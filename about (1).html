@@ -8,11 +8,44 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/navcss.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+ <meta name="description" content="Veltrix Digital offers cutting-edge digital services including web design, branding, and digital strategy to help your business grow.">
+<meta name="keywords" content="Veltrix Digital, digital agency, SEO, web design, branding, SEO, digital strategy, South Africa, Digital marketing, online marketing, tembisa">
+<meta name="author" content="Veltrix Digital">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://www.veltrixdigital.co.za/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://www.veltrixdigital.co.za/",
+  "@type": "LocalBusiness",
+  "name": "Veltrix Digital",
+  "url": "https://www.veltrixdigital.co.za",
+  "logo": "https://www.veltrixdigital.co.za/Images/logo/Veltrix@2x.png",
+  "image": "https://www.veltrixdigital.co.za/Images/logo/Veltrix@2x.png",
+  "description": "Veltrix Digital is a South African digital agency offering web design, branding, SEO, and digital strategy services.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "346 tswelopele tembisa",  <!-- Update as needed -->
+    "addressRegion": "Gauteng",
+    "addressCountry": "ZA"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+27 83 238 9005",  <!-- Replace with your number -->
+    "contactType": "customer service",
+    "areaServed": "ZA",
+    "availableLanguage": ["en"]
+  },
+ 
+}
+</script>
+ 
 </head>
 <body onload="AOS.init()">
 
-  <!-- Navbar -->
-   <header>
+<!-- Navbar -->
+ <header>
     <div class="header-container">
       <div class="logo-section">
   <div class="logo">
@@ -23,7 +56,6 @@
     </div>
   </div>
 </div>
-
       <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
       <nav id="navMenu">
@@ -36,55 +68,63 @@
     </div>
     <div class="gradient-bar"></div>
   </header>
-  <!-- Main Content -->
-  <main class="container py-4">
-    <!-- Hero Section -->
-    <section class="text-center py-5 bg-dark text-white">
-      <h1 class="display-4">
-      <span id="typed-text"></span>
-      <p class="lead">Expert SEO and Digital Marketing for Entrepreneurs and Businesses</p>
-    </section>
 
 <!-- Main Content -->
 <main class="container py-4">
   <!-- Hero Section -->
-  <section class="text-center py-5">
-    <h1 class="display-4">Boost Your Online Presence with AfroTech</h1>
+  <section class="text-center py-5 bg-dark text-white">
+    <h1 class="display-4">
+      <span id="typed-text"></span>
+    </h1>
     <p class="lead">Expert SEO and Digital Marketing for Entrepreneurs and Businesses</p>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-5">
-    <h2>About Us</h2>
-    <p>Veltrix helps brands grow online through data-driven SEO strategies and impactful digital marketing. We’re passionate about empowering African entrepreneurs and businesses with global visibility.</p>
-  </section>
-
-  <!-- Services Section -->
+    <!-- About Section -->
+    <section id="why-afrotech" class="py-5 text-center bg-light">
+      <div class="container">
+        <h2 class="mb-4">Why Choose Veltrix Digital?</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="fade-carousel">
+              <img id="fade-img" src="Images/service/webdesign.png" alt="AfroTech Value" class="img-fluid rounded shadow">
+            </div>
+            <p class="lead mt-4">
+              Founded in 2018 under the name Diloptic, Veltrix Digital has evolved into a forward-thinking digital marketing agency dedicated to empowering businesses in the digital space.
+              We offer a comprehensive range of services including digital marketing, graphic design, web design, SEO, web and email hosting, dedicated servers, as well as network and server management.
+              Our strength lies in our team of highly skilled and specialized professionals who bring creativity, technical expertise, and strategic insight to every project. We are passionate about delivering tailored solutions that not only meet our clients' goals but also exceed expectations.
+              At Veltrix Digital, we’re committed to innovation, reliability, and results that make a lasting impact.
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  
+  <!-- Services Preview -->
   <section id="services" class="py-5 bg-light">
     <h2 class="mb-4">Our Services</h2>
     <div class="row">
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <a href="services.html"><img src="Images/service/SEO.png" class="card-img-top" alt="SEO"></a>
+      <div class="col-md-4 mb-4" data-aos="fade-up">
+        <div class="card service-card h-100 shadow-sm">
+          <a href="services.html"> <img src="Images/service/SEO.png" class="card-img-top" alt="SEO"></a>
           <div class="card-body">
             <h5 class="card-title">Search Engine Optimization</h5>
             <p class="card-text">Boost your rankings and increase traffic with tailored SEO strategies.</p>
-            <strong>Book a Call</strong>
+            <p><strong>Book a Call</strong></p>
           </div>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <a href="services.html"><img src="Images/service/Social.png"" class="card-img-top" alt="Social Media"></a>
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card service-card h-100 shadow-sm">
+          <a href="services.html"><img src="Images/service/Social.png" class="card-img-top" alt="Social Media"></a>
           <div class="card-body">
             <h5 class="card-title">Social Media Campaigns</h5>
             <p class="card-text">Engage your audience with powerful social media storytelling.</p>
-            <strong>Book a Call</strong>
+             <p><strong>Book a Call</strong></p>
           </div>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="card">
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card service-card h-100 shadow-sm">
           <a href="services.html"><img src="Images/service/googleAds.png" class="card-img-top" alt="Google Ads"></a>
           <div class="card-body">
             <h5 class="card-title">Google Ads & Analytics</h5>
@@ -94,111 +134,46 @@
         </div>
       </div>
     </div>
+    <a href="services.html" class="btn btn-secondary">See All Services</a>
   </section>
-  <!-- Contact Form + Map -->
-  <!-- Service Request Form -->
-<section id="service-request" class="py-5">
-  <h2>Request a Service</h2>
-  <form action="https://formsubmit.co/info@veltrixdigital.co.za" id="dynamicServiceForm" class="row g-3" method="POST">
-    <div class="col-md-6">
-      <label for="serviceSelect" class="form-label">Select a Service</label>
-      <select class="form-select" id="serviceSelect" required>
-        <option value="">-- Select Service --</option>
-        <option value="webhosting">Web Hosting & Email Hosting</option>
-        <option value="seo">SEO Services</option>
-        <option value="webdev">Web Development</option>
-        <option value="graphic">Graphic Design</option>
-        <option value="server">Dedicated Cloud Windows Server</option>
-        <option value="mgmt">Server Management</option>
-      </select>
-    </div>
 
-    <!-- Web Dev Options -->
-    <div id="webDevOptions" class="col-12 d-none">
-      <fieldset>
-        <legend>Select Website Type</legend>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="webType" value="landing" id="landing">
-          <label class="form-check-label" for="landing">Landing Page</label>
+  <!-- Our Team-->
+  <section id="services" class="py-5 bg-light">
+    <h2 class="mb-4">Our Team</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4" data-aos="fade-up">
+        <div class="card service-card h-100 shadow-sm">
+          <img src="Images/user-profile-placeholder-image-png-286x300.jpg" class="card-img-top" alt="Ashele">
+          <div class="card-body">
+            <h5 class="card-title">Seo specialist and 10 yaers webdesign expect</h5>
+            <p class="card-text">Boost your rankings and increase traffic with tailored SEO strategies.</p>
+            
+          </div>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="webType" value="multi" id="multi">
-          <label class="form-check-label" for="multi">Multi Page Website</label>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card service-card h-100 shadow-sm">
+          <img src="Images/user-profile-placeholder-image-png-286x300.jpg"  class="card-img-top" alt="Social Media">
+          <div class="card-body">
+            <h5 class="card-title">Social Media Campaigns Guru and graphic design expect</h5>
+            <p class="card-text">Engage your audience with powerful social media storytelling.</p>
+          </div>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="webType" value="custom" id="custom">
-          <label class="form-check-label" for="custom">Other / Specify</label>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card service-card h-100 shadow-sm">
+          <img src="Images/user-profile-placeholder-image-png-286x300.jpg"  class="card-img-top" alt="Google Ads">
+          <div class="card-body">
+            <h5 class="card-title">IT specialist and marketing Guru</h5>
+            <p class="card-text">Maximize ROI with smart ad spend and actionable insights.</p>
+            
+          </div>
         </div>
-      </fieldset>
-    </div>
-
-    <div id="landingSections" class="col-12 d-none">
-      <label>Select Landing Page Sections</label>
-      <select class="form-select" multiple name="landingSections[]" value="section" id="section">
-        <option value="main">Main Section</option>
-        <option value="about">About Section</option>
-        <option value="contact">Contact Section</option>
-        <option value="gallery">Gallery Section</option>
-        <option value="footer">Footer Section</option>
-      </select>
-    </div>
-
-    <div id="multiPageSections" class="col-12 d-none">
-      <label>Select Pages for Website</label>
-      <select class="form-select" name="multiPageSections[]" multiple>
-        <option value="home">Home</option>
-        <option value="about">About</option>
-        <option value="contact">Contact</option>
-        <option value="gallery">Galleries</option>
-        <option value="posts">Posts</option>
-        <option value="other">Other</option>
-      </select>
-    </div>
-
-    <!-- Server Options -->
-    <div id="serverOptions" class="row d-none">
-      <div class="col-md-6">
-        <label class="form-label" value="Number" >Number of Users</label>
-        <input type="number" class="form-control" name="serverOptions[]" placeholder="e.g. 10">
-      </div>
-      <div class="col-md-6">
-        <label class="form-label" value="Ram" >Preferred RAM Memory</label>
-        <input type="text" class="form-control" name="Ram[]" placeholder="e.g. 16GB">
-      </div>
-      <div class="col-md-6">
-        <label class="form-label" value="HDD" >Preferred HDD</label>
-        <input type="text" class="form-control" name="HDD[]" placeholder="e.g. 512GB SSD">
-      </div>
-      <div class="col-md-6">
-        <label class="form-label" value="processor" >Preferred Processor</label>
-        <input type="text" class="form-control" name="processor[]" placeholder="e.g. Intel Xeon">
       </div>
     </div>
+  </section>
 
-    <!-- Standard Fields -->
-    <div class="col-md-6">
-      <label class="form-label">Your Name</label>
-      <input type="text" name="name" class="form-control" required>
-    </div>
-    <div class="col-md-6">
-      <label class="form-label">Your Email</label>
-      <input type="email" name="email" class="form-control" required>
-    </div>
-    <div class="col-md-6">
-      <label class="form-label">Contact Name</label>
-      <input type="text" name="contactName" class="form-control" required>
-    </div>
-    <div class="col-12">
-      <label class="form-label">Project Description</label>
-      <textarea name="description" class="form-control" rows="4" required></textarea>
-    </div>
-
-    <div class="col-12">
-      <button type="submit" class="btn btn-primary">Submit Request</button>
-    </div>
-  </form>
-</section>
-</main>
+  
 
 <!-- Footer -->
 <footer class="text-center">
