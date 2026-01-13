@@ -95,24 +95,36 @@ export async function publishToGoogleBusiness(post: SocialPost) {
 
 // Main publishing function that handles all platforms
 export async function publishToAllPlatforms(post: SocialPost) {
-  const results = {
-    facebook: null as string | null,
-    instagram: null as string | null,
-    linkedin: null as string | null,
-    x: null as string | null,
-    tiktok: null as string | null,
-    googleBusiness: null as string | null
+  const platforms = [
+    { name: 'facebook' as const, fn: publishToFacebook },
+    { name: 'instagram' as const, fn: publishToInstagram },
+    { name: 'linkedin' as const, fn: publishToLinkedIn },
+    { name: 'x' as const, fn: publishToX },
+    { name: 'tiktok' as const, fn: publishToTikTok },
+    { name: 'googleBusiness' as const, fn: publishToGoogleBusiness }
+  ];
+
+  const results: Record<string, string | null> = {
+    facebook: null,
+    instagram: null,
+    linkedin: null,
+    x: null,
+    tiktok: null,
+    googleBusiness: null
   };
 
   try {
-    await Promise.allSettled([
-      publishToFacebook(post).then(() => results.facebook = "success").catch(() => results.facebook = "error"),
-      publishToInstagram(post).then(() => results.instagram = "success").catch(() => results.instagram = "error"),
-      publishToLinkedIn(post).then(() => results.linkedin = "success").catch(() => results.linkedin = "error"),
-      publishToX(post).then(() => results.x = "success").catch(() => results.x = "error"),
-      publishToTikTok(post).then(() => results.tiktok = "success").catch(() => results.tiktok = "error"),
-      publishToGoogleBusiness(post).then(() => results.googleBusiness = "success").catch(() => results.googleBusiness = "error")
-    ]);
+    await Promise.allSettled(
+      platforms.map(({ name, fn }) =>
+        fn(post)
+          .then(() => {
+            results[name] = "success";
+          })
+          .catch((error) => {
+            results[name] = error.message || "error";
+          })
+      )
+    );
   } catch (error) {
     console.error("Error publishing to social platforms:", error);
   }

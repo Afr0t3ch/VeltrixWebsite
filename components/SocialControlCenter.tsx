@@ -4,7 +4,6 @@ import { useState } from "react";
 export default function SocialControlCenter() {
   const [content, setContent] = useState("");
   const [hashtags, setHashtags] = useState("");
-  const [media, setMedia] = useState<File | null>(null);
   const [isPublishing, setIsPublishing] = useState(false);
   const [message, setMessage] = useState("");
 
@@ -61,13 +60,8 @@ export default function SocialControlCenter() {
       />
 
       <div className="mt-4 p-4 bg-black/40 rounded-xl border border-white/10">
-        <label className="block text-sm text-gray-400 mb-2">Media (Image/Video)</label>
-        <input
-          type="file"
-          accept="image/*,video/*"
-          onChange={(e) => setMedia(e.target.files?.[0] || null)}
-          className="text-gray-400 text-sm"
-        />
+        <label className="block text-sm text-gray-400 mb-2">Media (Image/Video) - Coming Soon</label>
+        <p className="text-xs text-gray-500">Media upload will be available in the next update</p>
       </div>
 
       <button
