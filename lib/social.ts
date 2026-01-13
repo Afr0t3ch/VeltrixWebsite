@@ -96,12 +96,12 @@ export async function publishToGoogleBusiness(post: SocialPost) {
 // Main publishing function that handles all platforms
 export async function publishToAllPlatforms(post: SocialPost) {
   const results = {
-    facebook: null,
-    instagram: null,
-    linkedin: null,
-    x: null,
-    tiktok: null,
-    googleBusiness: null
+    facebook: null as string | null,
+    instagram: null as string | null,
+    linkedin: null as string | null,
+    x: null as string | null,
+    tiktok: null as string | null,
+    googleBusiness: null as string | null
   };
 
   try {

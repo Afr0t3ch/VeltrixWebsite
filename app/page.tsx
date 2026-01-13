@@ -59,7 +59,7 @@ export default function Home() {
             Ready to <span className="text-veltrix-yellow">Grow</span>?
           </h2>
           <p className="text-gray-400 mb-8">
-            Let's build something amazing together. Get your free consultation today.
+            Let&apos;s build something amazing together. Get your free consultation today.
           </p>
           <a
             href="/contact"

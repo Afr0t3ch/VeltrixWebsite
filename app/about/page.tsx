@@ -20,7 +20,7 @@ export default function AboutPage() {
           <section className="bg-white/5 backdrop-blur-glass border border-white/10 rounded-2xl p-8">
             <h2 className="text-3xl font-bold mb-4 text-veltrix-green">Our Mission</h2>
             <p className="text-gray-300 text-lg leading-relaxed">
-              At Veltrix Digital, we're on a mission to empower businesses through cutting-edge digital solutions. 
+              At Veltrix Digital, we&apos;re on a mission to empower businesses through cutting-edge digital solutions. 
               We believe that every business deserves access to premium web design, effective marketing, and powerful 
               automation tools that drive real growth.
             </p>
@@ -30,7 +30,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-4 text-veltrix-yellow">Our Vision</h2>
             <p className="text-gray-300 text-lg leading-relaxed">
               We envision a world where businesses of all sizes can leverage enterprise-level digital infrastructure 
-              to compete globally. Through innovation, automation, and strategic thinking, we're building the future 
+              to compete globally. Through innovation, automation, and strategic thinking, we&apos;re building the future 
               of digital business operations.
             </p>
           </section>
@@ -69,7 +69,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-4 text-veltrix-yellow">Our Approach</h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
               We combine strategic thinking with technical excellence to deliver solutions that not only look 
-              great but drive measurable business results. From initial consultation to ongoing support, we're 
+              great but drive measurable business results. From initial consultation to ongoing support, we&apos;re 
               your partner in digital success.
             </p>
             <ul className="space-y-3 text-gray-300">
@@ -95,7 +95,7 @@ export default function AboutPage() {
 
         <div className="mt-16 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to work with us?</h2>
-          <p className="text-gray-400 mb-8">Let's discuss how we can help your business grow.</p>
+          <p className="text-gray-400 mb-8">Let&apos;s discuss how we can help your business grow.</p>
           <a
             href="/contact"
             className="inline-block px-8 py-4 bg-veltrix-green text-black font-semibold rounded-xl hover:scale-105 transition"

@@ -55,7 +55,7 @@ export default function PortfolioPage() {
             Our <span className="text-veltrix-yellow">Portfolio</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Real results for real businesses. See how we've helped our clients succeed.
+            Real results for real businesses. See how we&apos;ve helped our clients succeed.
           </p>
         </div>
 
@@ -88,7 +88,7 @@ export default function PortfolioPage() {
 
         <div className="mt-20 text-center">
           <h2 className="text-3xl font-bold mb-4">Want to be our next success story?</h2>
-          <p className="text-gray-400 mb-8">Let's create something amazing together.</p>
+          <p className="text-gray-400 mb-8">Let&apos;s create something amazing together.</p>
           <a
             href="/contact"
             className="inline-block px-8 py-4 bg-veltrix-red text-white font-semibold rounded-xl hover:scale-105 transition"

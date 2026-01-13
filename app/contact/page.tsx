@@ -62,7 +62,7 @@ export default function ContactPage() {
             Get a <span className="text-veltrix-green">Quote</span>
           </h1>
           <p className="text-xl text-gray-400">
-            Tell us about your project and we'll get back to you within 24 hours
+            Tell us about your project and we&apos;ll get back to you within 24 hours
           </p>
         </div>
 

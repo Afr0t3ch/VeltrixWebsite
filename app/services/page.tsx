@@ -74,7 +74,7 @@ export default function ServicesPage() {
 
         <div className="mt-20 text-center">
           <h2 className="text-3xl font-bold mb-4">Not sure which service you need?</h2>
-          <p className="text-gray-400 mb-8">Let's discuss your goals and create a custom solution.</p>
+          <p className="text-gray-400 mb-8">Let&apos;s discuss your goals and create a custom solution.</p>
           <a
             href="/contact"
             className="inline-block px-8 py-4 bg-veltrix-green text-black font-semibold rounded-xl hover:scale-105 transition"
