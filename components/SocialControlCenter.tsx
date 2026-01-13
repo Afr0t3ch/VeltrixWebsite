@@ -25,6 +25,7 @@ export default function SocialControlCenter() {
   });
 
   const [status, setStatus] = useState("");
+  const [wasScheduled, setWasScheduled] = useState(false);
 
   const togglePlatform = (id: string) => {
     setPlatforms(
@@ -39,6 +40,8 @@ export default function SocialControlCenter() {
     const selectedPlatforms = platforms
       .filter((p) => p.enabled)
       .map((p) => p.id);
+
+    const isScheduled = !!postContent.scheduleDate;
 
     try {
       const response = await fetch("/api/social", {
@@ -56,6 +59,7 @@ export default function SocialControlCenter() {
 
       if (response.ok) {
         setStatus("success");
+        setWasScheduled(isScheduled);
         setPostContent({
           text: "",
           hashtags: "",
@@ -198,7 +202,7 @@ export default function SocialControlCenter() {
 
           {status === "success" && (
             <div className="p-4 bg-veltrix-green/20 border border-veltrix-green rounded-lg text-veltrix-green text-center">
-              Post {postContent.scheduleDate ? "scheduled" : "published"}{" "}
+              Post {wasScheduled ? "scheduled" : "published"}{" "}
               successfully!
             </div>
           )}

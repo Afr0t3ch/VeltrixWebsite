@@ -63,7 +63,7 @@ export function formatContentForPlatform(
 // Helper function to validate post content
 export function validatePost(
   content: string,
-  platforms: string[]
+  selectedPlatforms: string[]
 ): { valid: boolean; errors: string[] } {
   const errors: string[] = [];
 
@@ -71,11 +71,11 @@ export function validatePost(
     errors.push("Content cannot be empty");
   }
 
-  if (platforms.length === 0) {
+  if (selectedPlatforms.length === 0) {
     errors.push("At least one platform must be selected");
   }
 
-  platforms.forEach((platform) => {
+  selectedPlatforms.forEach((platform) => {
     if (!(platform in platforms)) {
       errors.push(`Invalid platform: ${platform}`);
     }
