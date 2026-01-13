@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --veltrix-red: #E53935;
+  --veltrix-green: #00E676;
+  --veltrix-yellow: #FFD600;
+  --veltrix-dark: #0B0F14;
+}
+
+body {
+  @apply bg-veltrix-dark text-white;
+}
+
+/* Glassmorphism effects */
+.glass {
+  @apply backdrop-blur-glass bg-white/10 border border-white/20;
+}
+
+.glass-dark {
+  @apply backdrop-blur-glass bg-black/30 border border-white/10;
+}
+
+/* Gradient effects */
+.gradient-text {
+  @apply bg-gradient-to-r from-veltrix-green via-veltrix-yellow to-veltrix-red bg-clip-text text-transparent;
+}
+
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--veltrix-green), var(--veltrix-yellow), var(--veltrix-red));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 230, 118, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(0, 230, 118, 0.6); }
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
