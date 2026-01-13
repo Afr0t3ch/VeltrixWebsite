@@ -16,7 +16,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold mb-4 gradient-text">Our Mission</h2>
           <p className="text-gray-400 text-lg leading-relaxed">
             At Veltrix Digital, our mission is to empower businesses of all sizes with cutting-edge digital solutions. 
-            We believe that every business deserves a strong online presence, and we're here to make that happen through 
+            We believe that every business deserves a strong online presence, and we&apos;re here to make that happen through 
             expert web development, strategic SEO, and innovative digital marketing.
           </p>
         </div>

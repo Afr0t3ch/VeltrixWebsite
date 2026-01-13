@@ -65,7 +65,7 @@ export default function SocialControlCenter() {
       } else {
         setStatus("error");
       }
-    } catch (error) {
+    } catch {
       setStatus("error");
     }
   };

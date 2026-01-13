@@ -1,5 +1,3 @@
-import ServiceCard from "@/components/ServiceCard";
-
 export default function ServicesPage() {
   const services = [
     {
@@ -51,7 +49,7 @@ export default function ServicesPage() {
           <span className="gradient-text">Our Services</span>
         </h1>
         <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-          Comprehensive digital solutions to help your business succeed online. From web design to digital marketing, we've got you covered.
+          Comprehensive digital solutions to help your business succeed online. From web design to digital marketing, we&apos;ve got you covered.
         </p>
       </div>
 
@@ -80,7 +78,7 @@ export default function ServicesPage() {
           <span className="gradient-text">Ready to Get Started?</span>
         </h2>
         <p className="text-gray-400 mb-8">
-          Contact us today for a free consultation and let's discuss how we can help your business grow.
+          Contact us today for a free consultation and let&apos;s discuss how we can help your business grow.
         </p>
         <a
           href="/contact"

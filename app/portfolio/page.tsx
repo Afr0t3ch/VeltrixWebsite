@@ -45,7 +45,7 @@ export default function PortfolioPage() {
           <span className="gradient-text">Our Portfolio</span>
         </h1>
         <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-          Explore our successful projects and see how we've helped businesses achieve their digital goals
+          Explore our successful projects and see how we&apos;ve helped businesses achieve their digital goals
         </p>
       </div>
 
@@ -79,7 +79,7 @@ export default function PortfolioPage() {
           <span className="gradient-text">Want to See Your Project Here?</span>
         </h2>
         <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-          Let's work together to create something amazing. Contact us today to discuss your project.
+          Let&apos;s work together to create something amazing. Contact us today to discuss your project.
         </p>
         <a
           href="/contact"

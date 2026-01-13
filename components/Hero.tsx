@@ -3,13 +3,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function Hero() {
-  const headlines = [
-    "Powering Digital Growth",
-    "Websites Built for Scale",
-    "SEO That Delivers Results",
-    "Ads That Convert"
-  ];
-
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       <div className="container mx-auto px-4 text-center">

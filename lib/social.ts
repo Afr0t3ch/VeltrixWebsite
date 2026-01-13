@@ -91,8 +91,7 @@ export function validatePost(
 // In a real implementation, this would integrate with actual APIs
 export async function postToSocialMedia(
   content: string,
-  platforms: string[],
-  media?: File | null
+  platforms: string[]
 ): Promise<{ platform: string; success: boolean; postId?: string }[]> {
   // Simulate API calls
   const results = platforms.map((platform) => ({
